@@ -28,9 +28,9 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    display: flex; /* Utilisation de flexbox pour la mise en page principale */
-    min-height: 100vh; /* S'assurer que le body prend au moins toute la hauteur de la vue */
-    flex-direction: column; /* Permet le footer en bas */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 a {
@@ -49,20 +49,26 @@ header {
     padding: 1rem 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    position: sticky;
+    position: sticky; /* Reste en haut lors du défilement */
     top: 0;
-    z-index: 1000; /* Assure que l'entête est au-dessus du contenu */
+    z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Pour le titre et le bouton */
+    justify-content: space-between; /* Aligne les éléments aux extrémités */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Assure que le conteneur remplit l'espace */
 }
 
 header h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
-    margin: 0;
-    flex-grow: 1; /* Permet au titre de prendre de la place */
-    text-align: center; /* Centre le titre par défaut */
+    margin: 0 auto; /* Centre le titre */
+    text-align: center;
+    flex-grow: 1; /* Permet au titre de prendre de la place restante */
 }
 
 /* Bouton toggle navigation (menu burger) */
@@ -74,7 +80,11 @@ header h1 {
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem;
-    z-index: 1001; /* Au-dessus de tout */
+    z-index: 1001;
+    position: absolute; /* Position absolue pour ne pas interférer avec le centrage du titre */
+    left: 1.5rem; /* Aligné à gauche de l'en-tête */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .nav-toggle span {
@@ -93,14 +103,14 @@ header h1 {
     width: 250px;
     padding: 1.5rem 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Fixe la barre latérale */
-    top: 0;
+    position: fixed;
+    top: 0; /* Aligné en haut */
     left: 0;
-    height: 100%;
-    overflow-y: auto; /* Permet le défilement si le contenu est long */
+    height: 100%; /* Prend toute la hauteur */
+    overflow-y: auto;
     padding-top: 5rem; /* Espace pour l'entête */
     transition: transform 0.3s ease-in-out;
-    z-index: 999; /* En dessous de l'entête */
+    z-index: 999;
 }
 
 .sidebar ul {
@@ -117,7 +127,7 @@ header h1 {
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
-    border-left: 4px solid transparent; /* Pour l'indicateur actif */
+    border-left: 4px solid transparent;
 }
 
 .sidebar ul li a:hover,
@@ -137,7 +147,6 @@ header h1 {
     margin-top: 1rem;
 }
 
-/* Styles pour les sous-listes dans la navigation */
 .sidebar ul ul {
     padding-left: 1.5rem;
     margin-top: 0.5rem;
@@ -154,8 +163,10 @@ header h1 {
     margin-left: 250px; /* Laisse de la place pour la sidebar */
     flex-grow: 1;
     padding: 2rem;
-    max-width: calc(100% - 250px); /* Pour ne pas dépasser le bord droit */
-    width: 100%; /* S'assurer que le contenu utilise la largeur disponible */
+    max-width: calc(100% - 250px);
+    width: 100%;
+    /* Ajout pour éviter que le contenu ne passe sous le header fixe sur mobile si la sidebar est ouverte */
+    transition: margin-left 0.3s ease-in-out;
 }
 
 /* Sections du contenu */
@@ -195,7 +206,6 @@ strong {
     color: var(--primary-color);
 }
 
-/* Styles pour les images dans le contenu */
 main img {
     max-width: 100%;
     height: auto;
@@ -214,7 +224,7 @@ main img {
 
 .image-item {
     text-align: center;
-    background-color: #f0f0f0; /* Léger arrière-plan pour l'image */
+    background-color: #f0f0f0;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
@@ -222,8 +232,8 @@ main img {
 
 .image-item img {
     margin: 0 auto 0.8rem auto;
-    max-height: 250px; /* Limite la hauteur des images dans la grille */
-    width: auto; /* Ajuste la largeur automatiquement */
+    max-height: 250px;
+    width: auto;
 }
 
 .image-item p {
@@ -233,7 +243,6 @@ main img {
     margin-bottom: 0;
 }
 
-/* Styles pour les tableaux (si vous en ajoutez) */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -255,12 +264,60 @@ table th {
 table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+.telechargement_container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 
-/* Liste de téléchargement */
+}
 .download-list li {
     margin-bottom: 1rem;
+    list-style: none ;
+}
+.download-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+/* --- Téléchargements : disposition moderne et responsive --- */
+.telechargement_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
+.pieces_container,
+.assemblage_container {
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pieces_container h3,
+.assemblage_container h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.download-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.download-list li {
+    margin: 0.7em 0;
+    text-align: center;
+}
 .download-list li a {
     display: inline-block;
     background-color: var(--primary-color);
@@ -271,11 +328,19 @@ table tr:nth-child(even) {
     text-decoration: none;
 }
 
+
+
+@media (max-width: 600px) {
+    .telechargement_container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 .download-list li a:hover {
     background-color: var(--secondary-color);
     text-decoration: none;
 }
-
 
 /* --- Pied de page --- */
 footer {
@@ -283,7 +348,7 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: auto; /* Pousse le footer vers le bas */
+    margin-top: auto;
     width: 100%;
 }
 
@@ -292,23 +357,25 @@ footer {
 /* Pour les petits écrans (smartphones) */
 @media (max-width: 768px) {
     header {
-        justify-content: flex-start; /* Aligne le contenu à gauche */
+        justify-content: center; /* Centre le contenu de l'entête */
+        padding: 1rem 0; /* Ajuste le padding */
     }
 
     header h1 {
-        text-align: left; /* Alignement du titre à gauche sur mobile */
-        margin-left: 1rem; /* Petit espacement après le bouton */
         font-size: 1.5rem;
     }
 
     .nav-toggle {
         display: block; /* Affiche le bouton burger */
+        left: 1rem; /* Ajuste la position pour un meilleur espacement */
     }
 
     .sidebar {
         transform: translateX(-100%); /* Cache la barre latérale hors de l'écran */
-        width: 100%; /* Prend toute la largeur sur mobile */
-        padding-top: 4rem; /* Ajuste le padding pour l'entête */
+        width: 80%; /* Prend une bonne partie de la largeur sur mobile */
+        max-width: 300px; /* Limite la largeur max de la sidebar sur mobile */
+        padding-top: calc(1rem + 5rem); /* Ajuste le padding pour l'entête, 1rem est le padding top du header */
+        top: 0; /* S'assure qu'elle commence en haut de l'écran */
     }
 
     .sidebar.open {
