@@ -5,7 +5,7 @@ function includeNav() {
       return response.text();
     })
     .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
+      document.getElementById('header').innerHTML = data;
     })
     .catch(error => {
       console.error("Erreur de chargement de la nav :", error);
