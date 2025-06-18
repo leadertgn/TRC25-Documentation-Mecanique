@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="header-content">
-            <button class="nav-toggle" aria-label="Basculer la navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -18,7 +18,7 @@
         </div>
     </header>
 
-<nav class="sidebar" id="navbar-placeholder"></nav>
+    <nav class="sidebar" id="navbar-placeholder"></nav>
 
     <main class="content">
         <section>
@@ -33,8 +33,8 @@
             <ul>
                 <li><strong>Système d'unité :</strong> MMGS (millimètre, gramme, seconde).</li>
                 <li><strong>Décimale :</strong> 2 (toutes les dimensions doivent être exprimées avec deux chiffres après la virgule.)</li>
-                <li><strong>Tolérance :</strong> ± 5&nbsp;% (marge d'erreur).</li>
-                <li><strong>Matériaux et densité :</strong> Acier AISI 1020&nbsp;; Densité&nbsp;: 0,0079 g/mm³.</li>
+                <li><strong>Tolérance :</strong> ± 5% (marge d'erreur).</li>
+                <li><strong>Matériaux et densité :</strong> Acier AISI 1020 ; Densité : 0,0079 g/mm³.</li>
                 <li><strong>Remarque générale :</strong> Tous les trous sont débouchants sauf indication contraire.</li>
             </ul>
 
@@ -42,37 +42,62 @@
             <p>Selon notre analyse, nous avons les vues de face, droite, dessous et la vue isométrique.</p>
             <div class="image-grid">
                 <div class="image-item">
-                    <p>Vue de Face</p>
-                </div>
-                <div class="image-item">
-                    <p>Vue de Droite</p>
-                </div>
-                <div class="image-item">
-                    <p>Vue de Dessous</p>
-                </div>
-                <div class="image-item">
-                    <p>Vue Isométrique</p>
+                    <img src="../images/piece3/7.png" alt="Vue de face Pièce 3">
                 </div>
             </div>
 
             <h3>4. Processus de réalisation de la pièce 3</h3>
 
-            <h4>1<sup>ère</sup> étape : Réalisation de l'extrusion</h4>
+            <h4>1ère Étape : Réalisation de l'extrusion</h4>
             <h5>Réalisation de l'esquisse à extruder</h5>
             <p>Après avoir dessiné l'esquisse de base, nous allons procéder au décalage de l'esquisse. Le décalage est de <strong>10 mm</strong>.</p>
+            <div class="image-item">
+                <img src="../images/piece3/1.png" alt="Esquisse de base avant décalage">
+                <p>Esquisse de base</p>
+            </div>
+            
             <h5>Extrusion de l'esquisse réalisée</h5>
-            <p>Sélectionnez l'esquisse et utilisez la fonction <strong>Base/Bossage extrudé</strong> pour lui donner une épaisseur.</p>
-            <h4>2<sup>ème</sup> étape : Enlèvement de matière</h4>
+            <p>Sélectionnez l'esquisse et utilisez la fonction <strong>"Base/Bossage extrudé"</strong> pour lui donner une épaisseur.</p>
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="../images/piece3/2.png" alt="Vue de l'esquisse après décalage">
+                    <p>Esquisse après décalage</p>
+                </div>
+                <div class="image-item">
+                    <img src="../images/piece3/3.png" alt="Extrusion de l'esquisse">
+                    <p>Extrusion de l'esquisse</p>
+                </div>
+                <div class="image-item">
+                    <img src="../images/piece3/4.png" alt="Résultat de l'extrusion">
+                    <p>Résultat de l'extrusion</p>
+                </div>
+            </div>
+
+            <h4>2ème Étape : Enlèvement de matière</h4>
             <h5>Enlèvement de matière appliqué à l'esquisse</h5>
-            <p>Allez dans la fonction <strong>Enlèvement de matière extrudé</strong> et appliquez-la sur les zones requises de l'esquisse.</p>
-            <h4>3<sup>ème</sup> étape : Configuration du matériau de la pièce 3 et évaluation de masse</h4>
+            <p>Allez dans la fonction <strong>"Enlèvement de matière extrudé"</strong> et appliquez-la sur les zones requises de l'esquisse.</p>
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="../images/piece3/5.png" alt="Esquisse pour enlèvement de matière">
+                    <p>Esquisse pour enlèvement de matière</p>
+                </div>
+                <div class="image-item">
+                    <img src="../images/piece3/6.png" alt="Résultat de l'enlèvement de matière">
+                    <p>Résultat de l'enlèvement de matière</p>
+                </div>
+            </div>
+
+            <h4>3ème Étape : Configuration du matériau de la pièce 3 et évaluation de masse</h4>
             <h5>Configuration du matériau</h5>
             <p>Suivez la même procédure que pour la Pièce 1 pour définir le matériau sur <strong>Acier AISI 1020</strong>.</p>
             <h5>Évaluation de masse</h5>
-            <p>Suivez la même procédure que pour la Pièce 1 pour évaluer la masse.</p>
+            <p>Suivez la même procédure que pour la Pièce 1 pour évaluer la masse. </p>
             <p>Enfin, nous avons obtenu comme masse pour la troisième pièce une masse de <strong>1633,25 g</strong>.</p>
         </section>
     </main>
 
-<footer id="footer-placeholder"></footer>
+    <footer id="footer-placeholder"></footer>
+
     <script src="../js/script.js"></script>
+</body>
+</html>
