@@ -60,7 +60,10 @@ header {
 .header-content {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Aligne les éléments aux extrémités */
+    flex-grow: 1; /* Permet au contenu de prendre toute la largeur disponible */
     width: 100%; /* Assure que le conteneur remplit l'espace */
+    gap: 1rem; /* Espace entre les éléments */
 }
 
 header h1 {
@@ -357,7 +360,7 @@ footer {
 /* Pour les petits écrans (smartphones) */
 @media (max-width: 768px) {
     header {
-        justify-content: center; /* Centre le contenu de l'entête */
+       /* justify-content: center; /* Centre le contenu de l'entête */
         padding: 1rem 0; /* Ajuste le padding */
     }
 
