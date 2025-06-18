@@ -32,7 +32,7 @@
             </li>
             <li><a href="../assemblage/assemblage_pince.html">Assemblage de la Pince</a></li>
             <li><a href="../telechargements.html">Fichiers SolidWorks</a></li>
-            <li><a href="https://github.com/votre_utilisateur/TRC25-Documentation-Mecanique" target="_blank">Dépôt GitHub</a></li>
+            <li><a href="#" target="_blank">Dépôt GitHub</a></li>
         </ul>
     </nav>
 
@@ -57,10 +57,7 @@
             <h3>3. Représentation graphique de la pièce 1</h3>
             <div class="image-grid">
                 <div class="image-item">
-                    <p>Vue de dessus</p>
-                </div>
-                <div class="image-item">
-                    <p>Vue isométrique</p>
+                    <p><img src="../images/piece1/1.png" alt=""></p>
                 </div>
             </div>
 
@@ -69,10 +66,9 @@
             <h4>1ère Étape : Configuration des paramètres initiaux du dessin (système d'unité et matériaux)</h4>
             <h5>Configuration du système d'unité</h5>
             <p>Dans SolidWorks, regardez tout en bas à droite de l'interface. Vous verrez une zone qui affiche le système d'unité actuel (MMGS, IPS, etc.).</p>
-            <ol>
-                <li>Cliquez sur cette zone.</li>
-                <li>Un petit menu apparaît, choisissez <strong>MMGS</strong>.</li>
-            </ol>
+            <ul>
+                <li>Choisissez <strong>MMGS</strong>.</li>
+            </ul>
             <p>La configuration du système d'unité est maintenant définie.</p>
             <h5>Mise en place du matériau (Acier AISI 1020)</h5>
             <ol>
@@ -131,10 +127,17 @@
                         <li>Prenez la fonction "Symétrie des entités". Dans la case "Entités à symétriser", sélectionnez l'arc précédemment créé et les lignes de l'ouverture. Dans la case "Symétrie par rapport à", cliquez sur la ligne de construction.</li>
                         <li>Validez pour créer les entités symétriques.</li>
                     </ul>
+                    <div class="image-item">
+                        <p><img src="../images/piece1/2.png" alt=""></p>
+                    </div>
                 </li>
                 <li><strong>Ajustement de l'arc pour extrusion unique :</strong>
                     <p>Après validation, ajustez l'arc du grand cercle situé entre les deux arcs de raccordement. Cette étape est essentielle pour garantir que l'esquisse constitue une géométrie fermée et continue, permettant ainsi une extrusion en une seule opération. Lorsque l'esquisse contient des discontinuités, la fonction d'extrusion exige la sélection manuelle de chaque zone. Pour éviter cela, supprimez les segments superflus ou raccordez correctement les entités afin de former une seule surface exploitable.</p>
-                    </li>
+                    <div class="image-item">
+                        <p><img src="../images/piece1/3.png" alt=""></p>
+                    </div>
+                </li>
+
             </ol>
             <h5>Extrusion de l'esquisse</h5>
             <ol>
@@ -143,7 +146,13 @@
                 <li>Dans le champ de profondeur, modifiez la valeur par défaut à <strong>20 mm</strong> pour définir la hauteur de l'extrusion.</li>
                 <li>Validez l'opération pour obtenir le volume extrudé.</li>
             </ol>
+            <div class="image-item">
+                <p><img src="../images/piece1/4.png" alt=""></p>
+            </div>
             <p>Après la validation, vous obtenez le dessin ci-dessous :</p>
+            <div class="image-item">
+                <p><img src="../images/piece1/5.png" alt=""></p>
+            </div>
             <h4>3ème Étape : Enlèvement de la matière</h4>
             <ol>
                 <li>Sélectionnez la face supérieure de la pièce comme plan d'esquisse.</li>
@@ -152,7 +161,18 @@
                 <li>Allez dans l'onglet <strong>Fonction</strong>, puis sélectionnez la commande <strong>"Enlèvement de matière extrudé"</strong>.</li>
                 <li>Appliquez cette fonction sur une profondeur de <strong>10 mm</strong>.</li>
             </ol>
+            <div class="image-grid">
+                <div class="image-item">
+                    <p><img src="../images/piece1/6.png" alt=""></p>
+                </div>
+                <div class="image-item">
+                    <p><img src="../images/piece1/7.png" alt=""></p>
+                </div>
+            </div>
             <p>Après validation, vous obtenez :</p>
+            <div class="image-item">
+                <p><img src="../images/piece1/8.png" alt=""></p>
+            </div>
             <h4>4ème Étape : Évaluation de la masse</h4>
             <ol>
                 <li>Allez dans l'onglet <strong>Évaluer</strong> dans la barre d'outils.</li>
