@@ -360,7 +360,7 @@ footer {
 /* Pour les petits écrans (smartphones) */
 @media (max-width: 768px) {
     header {
-       /* justify-content: center; /* Centre le contenu de l'entête */
+        justify-content: center; /* Centre le contenu de l'entête */
         padding: 1rem 0; /* Ajuste le padding */
     }
 
