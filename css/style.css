@@ -65,7 +65,6 @@ header {
     width: 100%; /* Assure que le conteneur remplit l'espace */
     gap: 1rem; /* Espace entre les éléments */
 }
-
 header h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
@@ -84,7 +83,7 @@ header h1 {
     cursor: pointer;
     padding: 0.5rem;
     z-index: 1001;
-    position: absolute; /* Position absolue pour ne pas interférer avec le centrage du titre */
+   /* position: absolute; /* Position absolue pour ne pas interférer avec le centrage du titre */
     left: 1.5rem; /* Aligné à gauche de l'en-tête */
     top: 50%;
     transform: translateY(-50%);
@@ -336,7 +335,7 @@ table tr:nth-child(even) {
 @media (max-width: 600px) {
     .telechargement_container {
         grid-template-columns: 1fr;
-    }
+    } 
 }
 
 
@@ -367,7 +366,7 @@ footer {
     header h1 {
         font-size: 1.5rem;
     }
-
+    
     .nav-toggle {
         display: block; /* Affiche le bouton burger */
         left: 1rem; /* Ajuste la position pour un meilleur espacement */
